@@ -1,0 +1,37 @@
+.rotacion {
+	transform: rotateY(180deg);
+	transform-style: preserve-3d;
+	transition: all 0.3s linear;
+}
+
+html, body{
+	height:100%;
+	margin:0;
+	display: flex;
+	flex-direction: column;
+	background-color: #94acac;
+	font-family: 'Josefin Sans', sans-serif;
+  }
+
+.fondoGradiente {
+	background: linear-gradient(110deg, #262429, #c4c4c4);
+	color: white;
+	font-size: x-large;
+}
+
+.degradeMenu {
+	background: linear-gradient(0deg, #262429, #464449);
+}
+
+.degradeEstadisticas{
+	background: linear-gradient(0deg, #8c8991, #ebbdbd);
+}
+
+.clarito {
+	color:#532794;
+	font-size: xx-large;
+}
+
+.oculto {
+	display: none;
+}

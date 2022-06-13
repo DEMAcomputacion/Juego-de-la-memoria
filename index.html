@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Memotest</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!--   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+//    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+-->  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="container-fluido oculto" id="secundario">
+    <div class="m0 vh-100 row justify-content-center align-items-center" >
+        <div class="col-auto p-5 text-center degradeEstadisticas"  style="border-radius: 140px 10px 140px 10px;">
+            <h3 class="">Ganaste!!!</h3>
+            <h5 class="p-4" id="estadisticas"></h5>
+            <h1><button class="col-light" id="recargar" style="border-radius: 10px;">JUGAR</button></h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" id="principal">
+    <div class="row d-flex align-items-center p-1">
+        <div class="col text-center"><h3>Memotest 1.0 <small class="text-muted">David Morales para r/argentina-programa</small></h3>
+        </div>
+    </div>
+    <div class="row  border border-4 border-secondary d-flex align-items-center fondoGradiente">
+        <div class="col-sm-3 border-end border-4 border-dark border-opacity-25  align-items-center text-center" id="espacioMarcadores">
+            <div class="row-3 p-5">
+                <div class="row-6 border border-dark" style="background-color: #377479; border-radius: 10px 10px 0px 0;"><div classs="col">Tiempo de juego</div></div>
+                <div class="row-6 border p-3 border-dark degradeMenu" style="background-color: #666469"><div classs="col clarito" id="reloj">0:00</div></div>
+            </div>
+            <div class="row-3 p-5">
+                <div class="row-6 border border-dark" style="background-color: #377479; border-radius: 10px 10px 0px 0;"><div classs="col">Numero de intentos</div></div>
+                <div class="row-6 border p-3 border-dark degradeMenu" style="background-color: #666469"><div classs="col clarito" id="intentos">0</div></div>
+            </div>
+            <div class="row-3 p-5">
+                <div class="row-6 border border-dark" style="background-color: #377479; border-radius: 10px 10px 0px 0;"><div classs="col">Pares Conseguidos</div></div>
+                <div class="row-6 border p-3 border-dark degradeMenu" style="background-color: #666469"><div classs="col clarito" id="paresConseguidos">0</div></div>
+            </div>
+            <div class="row-3"></div>
+        </div>
+
+        <div class="col-sm-9" id="espacioTableroJuego" style="background-image: url('./imagenes/fondo.jpg'); width: 100; height: 100; transform: rotateY(180deg)">
+            <div class="container">
+
+                <div class="row p-2 gx-5">
+                    <div class="col" id="grid1"><img id="tj1" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid2"><img id="tj2" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid3"><img id="tj3" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid4"><img id="tj4" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid5"><img id="tj5" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid6"><img id="tj6" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                </div>
+                <div class="row p-2 gx-5">
+                    <div class="col" id="grid7"><img id="tj7" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid8"><img id="tj8" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid9"><img id="tj9" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid10"><img id="tj10" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid11"><img id="tj11" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid12"><img id="tj12" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                </div>
+                <div class="row p-2 gx-5">
+                    <div class="col" id="grid13"><img id="tj13" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid14"><img id="tj14" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid15"><img id="tj15" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid16"><img id="tj16" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid17"><img id="tj17" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                    <div class="col" id="grid18"><img id="tj18" draggable="false" src="./tarjetas/reves.png" class="img-fluid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer text-muted text-end"><a href="https://github.com/DEMAcomputacion" class="alert-link"><h6>https://github.com/DEMAcomputacion</h6></footer>
+<script src='index.js'></script>
+</body>
+</html>
